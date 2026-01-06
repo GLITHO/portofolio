@@ -1,0 +1,438 @@
+<!-- 
+    PORTFOLIO DE GLITHO MONAGNI BÉRENGER
+    
+    INSTRUCTIONS POUR PERSONNALISER CE SITE :
+    1. Photo de profil : Cherchez la ligne contenant "URL_VOTRE_PHOTO" (vers la ligne 100).
+       Décommentez la balise <img> et remplacez "URL_VOTRE_PHOTO" par le lien de votre photo.
+    2. Liens LinkedIn/GitHub : Cherchez la section "Contact" (vers la bas de page).
+       Remplacez les "#" dans les balises <a> par vos vrais liens de profil.
+    3. CV à télécharger : Assurez-vous d'avoir un fichier nommé "cv.pdf" dans le même dossier que ce fichier index.html.
+    4. Hébergement : Vous pouvez héberger ce fichier gratuitement sur GitHub Pages, Netlify, ou Vercel.
+-->
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - GLITHO Monagni Bérenger</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .hero-pattern {
+            background-color: #f8fafc;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold text-blue-900">GLITHO BÉRENGER</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">Accueil</a>
+                    <a href="#parcours" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">Parcours</a>
+                    <a href="#experiences" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">Expériences</a>
+                    <a href="#projets" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">Projets & Ambitions</a>
+                    <a href="#competences" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">Compétences</a>
+                    <a href="#contact" class="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md text-sm font-medium transition">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Accueil</a>
+                <a href="#parcours" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Parcours</a>
+                <a href="#experiences" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Expériences</a>
+                <a href="#projets" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Projets</a>
+                <a href="#competences" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Compétences</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-blue-600 font-semibold hover:bg-blue-50 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-12 md:pt-32 md:pb-24 hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/2 mb-10 md:mb-0 pr-0 md:pr-10">
+                <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-blue-600 uppercase bg-blue-100 rounded-full">
+                    Portfolio
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                    GLITHO <br> <span class="text-blue-600">Monagni Bérenger</span>
+                </h1>
+                <h2 class="text-xl md:text-2xl text-gray-600 font-semibold mb-6">
+                    Mathématicien & Aspirant Data Scientist
+                </h2>
+                <p class="text-lg font-semibold italic text-gray-600 mb-8 leading-relaxed">
+                Titulaire d'une licence fondamentale en mathématiques, passionné par la modélisation des données, je désire continuer les mathématiques et les sciences informatiques en master  afin d'acquérir ces compétences pour le service de mon pays.                </p>
+                <div class="bg-white font-semibold p-4 border-l-4 border-blue-500 shadow-sm rounded-r-md italic text-gray-700 mb-8">
+                    "Des mathématiques à l'impact social : modéliser pour mieux décider et former pour autonomiser."
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#projets" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition transform hover:-translate-y-1 text-center">
+                        Voir mes projets
+                    </a>
+                    <!-- Bouton CV -->
+                    <a href="cv.pdf" download="CV_GLITHO_Monagni_Berenger.pdf" class="px-8 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-lg hover:bg-gray-900 transition transform hover:-translate-y-1 text-center flex items-center justify-center gap-2">
+                        <i class="fas fa-file-download"></i>
+                        <span>Mon CV</span>
+                    </a>
+                    <a href="#contact" class="px-8 py-3 bg-white text-blue-600 border border-blue-600 font-semibold rounded-lg shadow hover:bg-blue-50 transition transform hover:-translate-y-1 text-center">
+                        Me contacter
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 bg-blue-100 rounded-full overflow-hidden border-8 border-white shadow-2xl">
+                    <!-- Placeholder for profile image -->
+                    <!-- <div class="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-400">
+                        <i class="fas fa-user text-6xl"></i>
+                    </div> -->
+                    <!-- Uncomment and replace src with actual image URL -->
+                    <img src="profile.jpeg" alt="GLITHO Monagni Bérenger" class="w-full h-full  object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parcours Académique -->
+    <section id="parcours" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Parcours Académique</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Master -->
+                <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-graduation-cap text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Master Mathématiques & Informatique</h3>
+                            <span class="text-sm text-blue-600 font-medium">En cours</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Spécialisation en Sciences Informatiques et Modélisation.</p>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">Modules Clés :</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs text-gray-600">Analyse de données</span>
+                            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs text-gray-600">Intelligence Artificielle</span>
+                            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs text-gray-600">Bases de données</span>
+                            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs text-gray-600">Python & R</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Licence -->
+                <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 shadow-sm hover:shadow-md transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-university text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Licence Fondamentale Mathématiques</h3>
+                            <span class="text-sm text-green-600 font-medium">Université de Lomé</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Formation solide en mathématiques fondamentales et appliquées.</p>
+                    <div class="mt-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">Compétences acquises :</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs text-gray-600">Algèbre</span>
+                            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs text-gray-600">Analyse</span>
+                            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs text-gray-600">Probabilités</span>
+                            <span class="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs text-gray-600">Statistiques</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expériences -->
+    <section id="experiences" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Expériences & Réalisations</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+            </div>
+
+            <div class="relative border-l-4 border-blue-200 ml-3 md:ml-6 space-y-12">
+                <!-- Exp 1 -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-3 top-0 w-6 h-6 bg-blue-600 rounded-full border-4 border-white"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-900">Enseignement Bénévole</h3>
+                        <p class="text-sm text-gray-500 mb-2">École privée</p>
+                        <p class="text-gray-600 mb-4">
+                            Cours de soutien en sciences et mathématiques pour élèves en difficulté.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                            <li>Développement d'une pédagogie différenciée.</li>
+                            <li>Amélioration des capacités d'écoute et de travail en équipe.</li>
+                            <li>Adaptation aux besoins spécifiques des élèves.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Exp 2 -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-3 top-0 w-6 h-6 bg-blue-400 rounded-full border-4 border-white"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-900">Cours Particuliers (Répétitions)</h3>
+                        <p class="text-sm text-gray-500 mb-2">À Domicile</p>
+                        <p class="text-gray-600 mb-4">
+                            Accompagnement individualisé et renforcement des acquis académiques.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                            <li>Suivi rigoureux de la progression des élèves.</li>
+                            <li>Réussite significative d'élèves aux examens officiels.</li>
+                            <li>Méthodologie axée sur la compréhension profonde.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets & Ambitions -->
+    <section id="projets" class="py-16 bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="uppercase tracking-widest text-blue-300 text-sm font-bold">Ma Vision</span>
+                <h2 class="text-3xl font-bold mt-2 mb-6">Projets & Ambitions</h2>
+                <p class="max-w-3xl mx-auto text-blue-100 text-lg italic">
+                    "Mettre les mathématiques et l'informatique au service de la santé publique et du développement du Togo."
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Project 1 -->
+                <div class="bg-blue-800 bg-opacity-50 p-6 rounded-xl border border-blue-700 hover:bg-opacity-70 transition">
+                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Modélisation de Données</h3>
+                    <p class="text-blue-200 text-sm">
+                        Analyse des taux de réussite scolaire pour optimiser les ressources éducatives et modélisation épidémiologique pour la gestion de santé publique.
+                    </p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-blue-800 bg-opacity-50 p-6 rounded-xl border border-blue-700 hover:bg-opacity-70 transition">
+                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop-code text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Outils d'Aide à la Décision</h3>
+                    <p class="text-blue-200 text-sm">
+                        Développement d'outils numériques pour assister les services publics dans la prise de décision basée sur des données probantes.
+                    </p>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-blue-800 bg-opacity-50 p-6 rounded-xl border border-blue-700 hover:bg-opacity-70 transition">
+                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Formation des Jeunes</h3>
+                    <p class="text-blue-200 text-sm">
+                        Initiation au numérique et à la science des données par le biais d'ateliers et de mentorat pour autonomiser la jeunesse togolaise.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
+                <h3 class="text-2xl font-bold mb-6 text-center">Objectifs à Moyen & Long Terme</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="flex items-start">
+                        <i class="fas fa-flask mt-1 mr-4 text-blue-300"></i>
+                        <div>
+                            <h4 class="font-bold text-lg">Laboratoire de Recherche</h4>
+                            <p class="text-blue-100 text-sm mt-1">Création d'un laboratoire de traitement de données et de simulation mathématique au Togo.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-user-graduate mt-1 mr-4 text-blue-300"></i>
+                        <div>
+                            <h4 class="font-bold text-lg">Doctorat</h4>
+                            <p class="text-blue-100 text-sm mt-1">Poursuite d'un doctorat en recherche appliquée (Mathématiques/IA pour le développement).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Mes Compétences</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto rounded"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Math -->
+                <div class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition duration-300">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-calculator text-4xl text-blue-600"></i>
+                        <h3 class="text-xl font-bold mt-4 text-gray-900">Mathématiques</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Modélisation mathématique</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Analyse de données</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Statistiques & Probabilités</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Recherche opérationnelle</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Info -->
+                <div class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition duration-300">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-code text-4xl text-blue-600"></i>
+                        <h3 class="text-xl font-bold mt-4 text-gray-900">Informatique</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Python, R, SQL</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Bases de données</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Power BI, Matplotlib</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Notions IA / Machine Learning</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="p-6 bg-gray-50 rounded-xl hover:shadow-lg transition duration-300">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-lightbulb text-4xl text-blue-600"></i>
+                        <h3 class="text-xl font-bold mt-4 text-gray-900">Soft Skills</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Pédagogie & Enseignement</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Gestion de projet</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Leadership</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Communication & Écoute</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Me Contacter</h2>
+            <p class="text-gray-600 mb-10 text-lg">
+                Vous avez un projet, une opportunité ou simplement une question ? N'hésitez pas à me contacter.
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="mailto:monagniberengerg@gmail.com" class="flex items-center justify-center px-8 py-4 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition text-gray-800 hover:text-blue-600 group">
+                    <i class="fas fa-envelope text-2xl mr-4 text-gray-400 group-hover:text-blue-600 transition"></i>
+                    <span class="font-medium">monagniberengerg@gmail.com</span>
+                </a>
+                
+                <div class="flex items-center justify-center px-8 py-4 bg-white border border-gray-200 rounded-xl shadow-sm">
+                    <i class="fas fa-map-marker-alt text-2xl mr-4 text-gray-400"></i>
+                    <span class="font-medium text-gray-800">Agbonou / Atakpame, Togo</span>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <p class="text-sm text-gray-500 mb-4">Retrouvez-moi sur</p>
+                <div class="flex justify-center space-x-6">
+                    <!-- LinkedIn Placeholder -->
+                    <a href="#" class="text-gray-400 hover:text-blue-700 transition transform hover:scale-110">
+                        <i class="fab fa-linkedin text-4xl"></i>
+                    </a>
+                    <!-- GitHub Placeholder -->
+                    <a href="#" class="text-gray-400 hover:text-gray-900 transition transform hover:scale-110">
+                        <i class="fab fa-github text-4xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="mb-2">&copy; 2023 GLITHO Monagni Bérenger. Tous droits réservés.</p>
+            <p class="text-sm text-gray-500">Créé avec passion pour l'impact social.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
